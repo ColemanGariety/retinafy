@@ -46,4 +46,14 @@ it's inside of my html somewhere. I'll upload a version of 'my-great-image.jpg' 
 
 Retinafy will automatically detect if the user is on a retina display, and switch out my-great-image for my-great-image@2x!
 
+4. No fourth step, it's that easy!
+
+Contributing to Retinafy
+========================
+
+Contributing to Retinafy is easy, since the project is hosted on GitHub. Fork and commit changes, then send a pull request and either
+
+"Retinafy" by Jackson Gariety & Ben Martin
+@JacksonGariety
+http://jacksongariety.com
 Retinafy
