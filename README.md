@@ -41,7 +41,7 @@ The above code will apply high resolution graphics to the entire page. All you n
 
 it's inside of my html somewhere. I'll upload a version of 'my-great-image.jpg' that is twice the number of pixels to my server in the same directory as the original file.
 
-my-great-image.jpg
+my-great-image.jpg<br>
 my-great-image@2x.jpg
 
 Retinafy will automatically detect if the user is on a retina display, and switch out my-great-image for my-great-image@2x!
