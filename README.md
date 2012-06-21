@@ -16,8 +16,11 @@ What does Retinafy have over other retina graphic replacement scripts?
 ======================================================================
 
 There are a number of retina graphic enabling scripts out there, but none allow you to switch out background images
-of elements, they only switch out image files. In addition, Retinafy is a very lightweight plugin, weighing in at a
-mere 887 bytes (4kb), so loading pages with this plugin stays blazing fast.
+of elements, they only switch out image files.
+
+In addition, Retinafy is a very lightweight plugin, weighing in at a mere 887 bytes (4kb), so loading pages with this plugin stays blazing fast.
+
+Retinafy is also a jQuery plugin, meaning it can be re-executed anywhere. This allows up to retinafy images at events such as a specific time, or after a click, etc.
 
 How do I use it?
 ================
