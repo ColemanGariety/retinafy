@@ -22,6 +22,8 @@ In addition, Retinafy is a very lightweight plugin, weighing in at a mere 887 by
 
 Retinafy is also a jQuery plugin, meaning it can be re-executed anywhere. This allows up to retinafy images at events such as a specific time, or after a click, etc.
 
+Retinafy also has built-in retina detection and will return true if you're on a retina display.
+
 How do I use it?
 ================
 
