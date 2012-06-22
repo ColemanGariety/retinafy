@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				font-family: 'Helvetica Neue';
+			}
+			pre {
+				line-height: 1.5;
+				border: 1px solid #000;
+				display: block;
+			}
+			img {
+				cursor: pointer;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="retinafy.js"></script>
+		<script>
+			if (!$('html').retinafy(null)) {
+				$('html').prepend('<h1>ATTENTION: You dont have a retina display. <a href="demo.pdf">Click here</a> to see a static version of this page.</h1>')
+			}
+		</script>
+	</head>
+	<body>
+		<section id="detect">
+			<h1>Demo 1 - Retinafy can be used to check if the user is running on a retina display.</h1>
+			<p>The plugin will return true or false based on what display you have:</p>
+			<pre>
+			
+	$('#detect input').click(function(){
+		if ($('html').retinafy(null)) {
+	    		alert(' You have a retina display! ')
+		} else {
+			alert(' You DONT have a retina display. :( ')
+		}
+	});
+			</pre>
+			<input type="button" value="Do I have a retina display?" />
+			<script>	
+				$('#detect input').click(function(){
+					if ($('html').retinafy(null)) {
+						alert('You have a retina display!')
+					} else {
+						alert('You DONT have a retina display. :(')
+					}
+				});
+			</script>
+		</section>
+		<section id="simple">
+			<h1>Demo 2 - Retinafy a section of the document.</h1>
+			<p>If I have two images, I can tell the plugin to retinafy one of them.</p>
+			<pre>
+
+	$(window).load(function(){
+		$('img.one').retinafy();
+	});
+			</pre>
+		<script>
+			$(window).load(function(){
+				$('img.two').retinafy();
+			});
+		</script>
+			<img class="one" src="http://localhost/github/Retinafy/octocat.jpg" width="300" height="300" />
+			<img class="two" src="http://localhost/github/Retinafy/octocat.jpg" width="300" height="300" />
+		</section>
+		<section id="hover">
+			<h1>Demo 4 - Retinafy while hovering over part of the document.</h1>
+			<pre>
+			
+	$(window).load(function(){
+		$('img.three').hover(function(){
+			$(this).retinafy();
+		},function(){
+			src = $(this).attr('src')
+			$(this).attr('src',src.replace(/@2x/,''))
+		});
+	});
+			</pre>
+		<script>
+			$(window).load(function(){
+				$('img.three').hover(function(){
+					$(this).retinafy();
+				},function(){
+					src = $(this).attr('src')
+					$(this).attr('src',src.replace(/@2x/,''))
+				});
+			});
+		</script>
+			<img class="three" src="http://localhost/github/Retinafy/octocat.jpg" width="300" height="300" />
+		</section>
+	</body>
+</html>
