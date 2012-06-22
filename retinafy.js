@@ -29,9 +29,9 @@
                     }
 
                     function urlExists(url) {
-                    	if (url.match(include)) {
+                    	if (url.match(include) && include !== undefined) {
 	                    	return true;
-                    	} if (!(!url.match(/^https?\:/i) || url.match("//" + document.domain))) {
+                    	} else if (!(!url.match(/^https?\:/i) || url.match("//" + document.domain))) {
                             return false;
                         } else {
                             var http = new XMLHttpRequest();
