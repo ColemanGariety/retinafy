@@ -52,20 +52,17 @@
 			<p>If I have two images, I can tell the plugin to retinafy one of them.</p>
 			<pre>
 
-	$(window).load(function(){
-		$('img.one').retinafy();
-	});
+	$('img.two').retinafy();
 			</pre>
+			<img class="one" src="http://localhost/github/Retinafy/octocat.jpg" />
+			<img class="two" src="http://localhost/github/Retinafy/octocat.jpg" />
 		<script>
-			$(window).load(function(){
-				$('img.two').retinafy();
-			});
+			
+			$('img.two').retinafy();
 		</script>
-			<img class="one" src="http://localhost/github/Retinafy/octocat.jpg" width="300" height="300" />
-			<img class="two" src="http://localhost/github/Retinafy/octocat.jpg" width="300" height="300" />
 		</section>
 		<section id="hover">
-			<h1>Demo 4 - Retinafy while hovering over part of the document.</h1>
+			<h1>Demo 3 - Retinafy while hovering over part of the document.</h1>
 			<pre>
 			
 	$(window).load(function(){
@@ -88,6 +85,18 @@
 			});
 		</script>
 			<img class="three" src="http://localhost/github/Retinafy/octocat.jpg" width="300" height="300" />
+		</section>
+		<section id="backgrounds">
+			<h1>Demo 4 - Retinafy an element's background image.</h1>
+			<p>Retinafy images set with the CSS background-image property or its shorthand kin.</p>
+			<pre>
+			
+	$('#backgrounds div').retinafy()
+			</pre>
+			<div style="width:300px;height:300px;background:url(octocat.jpg);"></div>
+			<script>
+				$('#backgrounds div').retinafy()
+			</script>
 		</section>
 	</body>
 </html>
