@@ -3,13 +3,13 @@
 	by Jackson Gariety
 	Version 1.0.2
 	6/22/12
- */
+*/
  
 (function ($) {
-    $.fn.retinafy = function (load) {
+    $.fn.retinafy = function (load,include) {
         target = $(this);
         if (window.devicePixelRatio >= 2) {
-            if (load !== null) {
+            if (load !== false) {
                 var retina = target.find('*').andSelf().filter(function () {
                     return $(this).is('img') || ($(this).css('backgroundImage') !== 'none');
                 })
@@ -19,8 +19,7 @@
                     var srcImg = $(img).attr('src');
                     var bgImg = $(img).css('background-image');
 
-                    function IsImageOk(img) {
-                        if (!img.complete) {
+                    function IsImageOk(img) {if (!img.complete) {
                             return false;
                         }
                         if (typeof img.naturalWidth != "undefined" && img.naturalWidth == 0) {
@@ -30,7 +29,9 @@
                     }
 
                     function urlExists(url) {
-                        if (!(!url.match(/^https?\:/i) || url.match("//" + document.domain))) {
+                    	if (url.match(include)) {
+	                    	return true;
+                    	} if (!(!url.match(/^https?\:/i) || url.match("//" + document.domain))) {
                             return false;
                         } else {
                             var http = new XMLHttpRequest();

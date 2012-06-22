@@ -25,7 +25,7 @@
 	<body>
 		<section id="detect">
 			<h1>Demo 1 - Retinafy can be used to check if the user is running on a retina display.</h1>
-			<p>The plugin will return true or false based on what display you have:</p>
+			<p>The plugin will return true or false based on what display you have. I'm also using $.retinafy(false) to prevent the plugin from retinafying the entire page in this instance, for the sake of the demo.</p>
 			<pre>
 			
 	$('#detect input').click(function(){
@@ -63,6 +63,7 @@
 		</section>
 		<section id="hover">
 			<h1>Demo 3 - Retinafy while hovering over part of the document.</h1>
+			<p>This shows of the jQuery portion of Retinafy, which allows for easy retinification after specific events.</p>
 			<pre>
 			
 	$(window).load(function(){
@@ -96,6 +97,18 @@
 			<div style="width:300px;height:300px;background:url(octocat.jpg);"></div>
 			<script>
 				$('#backgrounds div').retinafy()
+			</script>
+		</section>
+		<section id="inclusion">
+			<h1>Add to to the includes list.</h1>
+			<p>Due to restrictions of servers, Retinafy can't always detect if files exist across different domains. This is why Retinafy has an include list, to allow all files that match any part of a specific url. Keep in mind that since the inclusion list is the second variable, you must set the first to true in order to add to it. The following code allows all files with 'octocat' in the path or file name to be included, even if the server is distant and can't be reached.</p>
+			<pre>
+			
+	$('#inclusion img').retinafy(true,'octocat')
+			</pre>
+			<img src="octocat.jpg" />
+			<script>
+				$('#inclusion img').retinafy(true,'octocat')
 			</script>
 		</section>
 	</body>
