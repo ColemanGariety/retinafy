@@ -30,9 +30,9 @@ How do I use it?
 1. Include a copy of jQuery on the page and then retinafy.min.js below it.
 
   `<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>`
-	`<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>`
+	`<script src="https://your/path/to/retinafy.min.js"></script>`
 
-2. Now in a script tag, tell Retinafy where you want to apply high resolution graphics to your site. This feature allows you to easily re-apply Retinafy even after images change on yoru site.
+2. Now in a script tag, tell Retinafy where you want to apply high resolution graphics to your site. This feature allows you to easily re-apply Retinafy even after images change on your site.
 
 	`<script>
 		$('html').retinafy();
